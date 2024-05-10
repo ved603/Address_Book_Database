@@ -29,3 +29,28 @@ Database changed
 
 
 
+
+___________________________________________________________________
+
+	UC2 Create Table of Address Book.
+___________________________________________________________________
+
+
+mysql> create table address_book (id serial primary key, fname varchar(255) not null ,lname varchar(255) not null ,address varchar(255),city varchar(255) not null, state varchar(255) not null ,zip long not null ,phone long  not null, email varchar(255));
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> desc address_book;
++---------+-----------------+------+-----+---------+----------------+
+| Field   | Type            | Null | Key | Default | Extra          |
++---------+-----------------+------+-----+---------+----------------+
+| id      | bigint unsigned | NO   | PRI | NULL    | auto_increment |
+| fname   | varchar(255)    | NO   |     | NULL    |                |
+| lname   | varchar(255)    | NO   |     | NULL    |                |
+| address | varchar(255)    | YES  |     | NULL    |                |
+| city    | varchar(255)    | NO   |     | NULL    |                |
+| state   | varchar(255)    | NO   |     | NULL    |                |
+| zip     | mediumtext      | NO   |     | NULL    |                |
+| phone   | mediumtext      | NO   |     | NULL    |                |
+| email   | varchar(255)    | YES  |     | NULL    |                |
++---------+-----------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
