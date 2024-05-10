@@ -1,1 +1,31 @@
-Hello World from address Book Data.
+___________________________________________________________________
+
+	UC1 Create Database of Address Book.
+___________________________________________________________________
+
+
+mysql> create database Address_Book_Service;
+Query OK, 1 row affected (0.04 sec)
+
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| address_book_service |
+| information_schema   |
+| mysql                |
+| payroll_service      |
+| performance_schema   |
+| sakila               |
+| sys                  |
+| world                |
++----------------------+
+8 rows in set (0.01 sec)
+
+
+mysql> use address_book_service;
+Database changed
+
+
+
