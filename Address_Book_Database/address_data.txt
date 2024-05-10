@@ -227,3 +227,24 @@ mysql> select state, count(state) from address_book where state = "maharashtra" 
 | Maharashtra |            4 |
 +-------------+--------------+
 1 row in set (0.00 sec)
+
+
+
+___________________________________________________________________
+
+	UC8  Alphabetically sort the  address book data by name.
+___________________________________________________________________
+
+
+
+mysql> select * from address_book order by fname ASC;
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+| id | fname   | lname     | address          | city   | state         | zip    | phone      | email                       |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+|  3 | Sayali  | Kurhade   | Nerul            | Mumbai | Maharashtra   | 425405 | 9910120019 | SayaliKurhade20gmail.com    |
+|  2 | Tushar  | Jadhav    | Asalfa           | Mumbai | Maharashtra   | 421078 | 9400121022 | tusharjadhav21gmail.com     |
+|  4 | Vaibhav | Kumbhar   | Govandi          | Mumbai | Maharashtra   | 425210 | 9910124214 | VaibhavKumbhar19gmail.com   |
+|  1 | Vedant  | Gujarathi | Gujarathi Lane   | Chopda | Maharashtra   | 425107 | 9145526100 | vedantgujarathi22@gmail.com |
+|  5 | Vedant  | Jain      | sector 22 Bhopal | Bhopal | Madhyapradesh | 425107 | 7400441210 | VedantJain18gmail.com       |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+5 rows in set (0.00 sec)
