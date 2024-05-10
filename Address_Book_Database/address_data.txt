@@ -248,3 +248,45 @@ mysql> select * from address_book order by fname ASC;
 |  5 | Vedant  | Jain      | sector 22 Bhopal | Bhopal | Madhyapradesh | 425107 | 7400441210 | VedantJain18gmail.com       |
 +----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
 5 rows in set (0.00 sec)
+
+
+
+___________________________________________________________________
+
+	UC9  Ability to identify address_book by name and type.
+___________________________________________________________________
+
+
+
+mysql> update address_book set type = "Family" where fname = "Vedant" and city = "Chopda";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> Update address_book set type = "Friend" where fname = "Vaibhav" or fname = "Tushar";
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+
+mysql> Update address_book set type = "Profession" where fname = "Sayali";
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> update address_book set type = "Friend" where fname = "Vedant" and city = "Bhopal";
+Query OK, 1 row affected (0.04 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+
+mysql> select * from address_book;
+
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+------------+
+| id | fname   | lname     | address          | city   | state         | zip    | phone      | email                       | type       |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+------------+
+|  1 | Vedant  | Gujarathi | Gujarathi Lane   | Chopda | Maharashtra   | 425107 | 9145526100 | vedantgujarathi22@gmail.com | Family     |
+|  2 | Tushar  | Jadhav    | Asalfa           | Mumbai | Maharashtra   | 421078 | 9400121022 | tusharjadhav21gmail.com     | Friend     |
+|  3 | Sayali  | Kurhade   | Nerul            | Mumbai | Maharashtra   | 425405 | 9910120019 | SayaliKurhade20gmail.com    | Profession |
+|  4 | Vaibhav | Kumbhar   | Govandi          | Mumbai | Maharashtra   | 425210 | 9910124214 | VaibhavKumbhar19gmail.com   | Friend     |
+|  5 | Vedant  | Jain      | sector 22 Bhopal | Bhopal | Madhyapradesh | 425107 | 7400441210 | VedantJain18gmail.com       | Friend     |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+------------+
+5 rows in set (0.00 sec)
