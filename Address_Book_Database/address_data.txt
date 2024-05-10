@@ -36,6 +36,7 @@ ___________________________________________________________________
 ___________________________________________________________________
 
 
+
 mysql> create table address_book (id serial primary key, fname varchar(255) not null ,lname varchar(255) not null ,address varchar(255),city varchar(255) not null, state varchar(255) not null ,zip long not null ,phone long  not null, email varchar(255));
 Query OK, 0 rows affected (0.10 sec)
 
@@ -54,3 +55,48 @@ mysql> desc address_book;
 | email   | varchar(255)    | YES  |     | NULL    |                |
 +---------+-----------------+------+-----+---------+----------------+
 9 rows in set (0.01 sec)
+
+
+
+
+___________________________________________________________________
+
+	UC3 Insert data in tables.
+___________________________________________________________________
+
+
+
+
+ Insert into address_book(fname,lname,address,city,state,zip,phone,email) values("Vedant","Gujarathi","Gujarathi Lane","Chopda","Maharashtra",425107,9145526100,"vedantgujarathi22@gmail.com");
+Query OK, 1 row affected (0.03 sec)
+
+
+mysql> Insert into address_book(fname,lname,address,city,state,zip,phone,email) values ("Tushar","Jadhav","Asalfa","Mumbai","Maharashtra",421078,9400121022,"tusharjadhav21gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+
+mysql> Insert into address_book(fname,lname,address,city,state,zip,phone,email) values ("Sayali","Kurhade","Nerul","Mumbai","Maharashtra",425405,9910120019,"SayaliKurhade20gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+
+mysql> Insert into address_book(fname,lname,address,city,state,zip,phone,email) values ("Vaibhav","Kumbhar","Govandi","Mumbai","Maharashtra",425210,9910124214,"VaibhavKumbhar19gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+
+mysql> Insert into address_book(fname,lname,address,city,state,zip,phone,email) values ("Vedant","Jain","sector 22 Bhopal","Bhopal","Madhyapradesh",425107,7400441210,"VedantJain18gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+
+
+mysql> select * from address_book
+    -> ;
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+| id | fname   | lname     | address          | city   | state         | zip    | phone      | email                       |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+|  1 | Vedant  | Gujarathi | Gujarathi Lane   | Chopda | Maharashtra   | 425107 | 9145526100 | vedantgujarathi22@gmail.com |
+|  2 | Tushar  | Jadhav    | Asalfa           | Mumbai | Maharashtra   | 421078 | 9400121022 | tusharjadhav21gmail.com     |
+|  3 | Sayali  | Kurhade   | Nerul            | Mumbai | Maharashtra   | 425405 | 9910120019 | SayaliKurhade20gmail.com    |
+|  4 | Vaibhav | Kumbhar   | Govandi          | Mumbai | Maharashtra   | 425210 | 9910124214 | VaibhavKumbhar19gmail.com   |
+|  5 | Vedant  | Jain      | sector 22 Bhopal | Bhopal | Madhyapradesh | 425107 | 7400441210 | VedantJain18gmail.com       |
++----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+
+5 rows in set (0.00 sec)
