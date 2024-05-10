@@ -290,3 +290,27 @@ mysql> select * from address_book;
 |  5 | Vedant  | Jain      | sector 22 Bhopal | Bhopal | Madhyapradesh | 425107 | 7400441210 | VedantJain18gmail.com       | Friend     |
 +----+---------+-----------+------------------+--------+---------------+--------+------------+-----------------------------+------------+
 5 rows in set (0.00 sec)
+
+
+
+
+
+__________________________________________________________________
+
+	UC10  Count by type
+__________________________________________________________________
+
+
+
+
+mysql> select type,count(type) from address_book group by type;
++------------+-------------+
+| type       | count(type) |
++------------+-------------+
+| Family     |           1 |
+| Friend     |           3 |
+| Profession |           1 |
++------------+-------------+
+3 rows in set (0.00 sec)
+
+mysql>
